@@ -1,0 +1,16 @@
+// Who we are item
+.who-we-are-item {
+    .content {
+        padding: 40px 0;
+        background-color: $white;
+        .title {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 28px;
+            text-transform: uppercase;
+        }
+        p {
+            max-width: 230px;
+        }
+    }
+}

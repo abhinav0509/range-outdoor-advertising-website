@@ -1,0 +1,118 @@
+/*-------------------------
+    Section Title
+-------------------------*/
+
+.section-inner {
+    &.white {
+        .subtitle {
+            color: rgba($white, .7);
+        }
+        .title {
+            color: $white;
+        }
+        p {
+            color: rgba($white, .7);
+        }
+    }
+    &-title {
+        font-size: 40px;
+        line-height: 42px;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-family: var(--heading-font);
+        margin-bottom: 18px;
+        span {
+            color: var(--main-color-one);
+        }
+    }
+    .subtitle {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 24px;
+        text-transform: uppercase;
+        position: relative;
+        display: inline-block;
+        z-index: 0;
+        padding-left: 80px;
+        margin-bottom: 8px;
+        &:after {
+            position: absolute;
+            left: 0;
+            top: 10px;
+            height: 2px;
+            width: 60px;
+            background-color: var(--main-color-one);
+            content: '';
+        }
+    }
+}
+.title-md, [class*="title-md-"]{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    display: inline-block;
+    text-transform: uppercase;
+    position: relative;
+}
+ .title-md-line{
+    position:relative;
+    &:after{
+        content: "";
+        position: absolute;
+        right: -170px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 2px;
+        width: 155px;
+        background-color: var(--main-color-one);
+    }
+}
+.section-title {
+    &.white {
+        .title {
+            color: $white;
+        }
+    }
+    .title {
+        font-size: 60px;
+        line-height: 60px;
+        font-weight: 800;
+        font-family: var(--heading-font);
+        text-transform: uppercase;
+        margin-bottom: 14px;
+        span {
+            color: var(--main-color-one);
+        }
+    }
+    .subtitle {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        text-transform: uppercase;
+        position: relative;
+        display: inline-block;
+        z-index: 0;
+        margin-bottom: 8px;
+        color: var(--main-color-one);
+    }
+}
+.meta {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: var(--heading-font);
+    text-transform: uppercase;
+    color: var(--main-color-one);
+    margin-bottom: 20px;
+}
+
+.bg-litewhite {
+    background-color: #eaeaef;
+}
+
+.bg-white {
+    background-color: $white;
+}
+
+.bg-blue {
+    background-color: var(--main-color-one);
+}

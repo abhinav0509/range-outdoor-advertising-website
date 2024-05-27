@@ -1,0 +1,123 @@
+/*--------------------------------
+    Gallery Item
+--------------------------------*/
+
+.case-studies-menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-bottom: 25px;
+    li {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        // +li {
+        //     margin-left: 20px;
+        // }
+        span {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        &.active {
+            color: var(--main-color-one);
+        }
+    }
+}
+
+.case-studies-masonry {
+    .masonry-item {
+        cursor: pointer;
+    }
+}
+
+.single-case-studies-item {
+    margin-bottom: 40px;
+    .thumb {
+        position: relative;
+        z-index: 0;
+        overflow: hidden;
+        margin-bottom: 10px;
+        display: inline-block;
+        &:after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 0%;
+            top: 0;
+            left: 0;
+            background-color: rgba(38,20,66,.8);
+            visibility: hidden;
+            transition: all 0.5s;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 0%;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+            background-color: rgba(38,20,66,.8);
+            visibility: hidden;
+            transition: all 0.5s;
+        }
+        img {
+            transition: all .3s ease-in-out;
+        }
+        .icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--main-color-one);
+            opacity: 0;
+            font-size: 60px;
+            z-index: 1;
+            transition: .7s;
+        }
+    }
+    .content {
+        .title {
+            font-size: 15px;
+            text-transform:uppercase;
+            font-weight: 700;
+            line-height: 26px;
+            margin-bottom: 0;
+        }
+        p {
+            font-size: 14px;
+            color: #999999;
+            line-height: 20px;
+        }
+    }
+    &:hover {
+        .thumb {
+            &:after {
+                width: 100%;
+                height: 100%;
+                visibility: visible;
+            }
+            &:before {
+                width: 100%;
+                height: 100%;
+                visibility: visible;
+            }
+            img {
+                transform: scale(1.2);
+            }
+            .icon {
+                opacity: 1;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 575px) {
+    .single-case-studies-item .thumb {
+        display: block;
+        img{
+            width: 100%;
+        }
+    }
+
+}

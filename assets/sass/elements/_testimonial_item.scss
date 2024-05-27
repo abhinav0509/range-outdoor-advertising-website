@@ -1,0 +1,97 @@
+/*------------------------------
+    Testimonial Item
+-----------------------------*/
+
+.testimonial-carousel {
+    .owl-nav {
+        position: absolute;
+        top: -120px;
+        right: 0;
+    }
+    .owl-nav div {
+        position: absolute;
+        left: -60px;
+        top: 50%;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background-color: transparent;
+        border: 1px solid #efefef;
+        color: var(--heading-color);
+        @include transition($transition);
+        @include transform(translateY(-50%));
+        &:hover {
+            color: var(--main-color-one);
+            border: 1px solid var(--main-color-one);
+        }
+        &.owl-next {
+            left: auto;
+        }
+    }
+}
+
+.single-testimonial-item {
+    display: flex;
+    align-self: flex-start;
+    padding-right: 70px;
+    .icon {
+        font-size: 25px;
+        line-height: 60px;
+        width: 60px;
+        height: 60px;
+        color: #e5e5e5;
+        background-color: var(--secondary-color);
+        margin-right: 70px;
+        text-align: center;
+        border-radius: 50%;
+        position: absolute;
+        bottom: -30px;
+        right: 0;
+        z-index: 1;
+    }
+    .content {
+        flex: 1;
+        position: relative;
+        .thumb {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-bottom: 30px;
+            img {
+                border-radius: 50%;
+            }
+        }
+        .description {
+            font-size: 18px;
+            line-height: 30px;
+            color: #54545a;
+            font-weight: 400;
+            margin-bottom: 17px;
+        }
+        .author-details {
+            display: flex;
+            align-self: flex-start;
+            margin-top: 10px;
+            .author-meta {
+                flex: 1;
+                margin-left: 15px;
+                margin-top: 12px;
+                .title {
+                    font-size: 14px;
+                    line-height: 16px;
+                    margin-bottom: 0;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    color: var(--heading-color);
+                }
+                .designation {
+                    color: #a8a8a8;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+/*-------------------------
+    ## Preloader Css
+---------------------------*/
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    background: #180338;
+}
+
+#loader {
+    display: block;
+    position: absolute;
+    left: 46%;
+    top: 46%;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 5px solid #270d4e;
+    border-top-color: var(--main-color-one);
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    transform: translate(-50%, -50%);
+}
+
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

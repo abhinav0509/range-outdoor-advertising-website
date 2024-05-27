@@ -1,0 +1,75 @@
+/*---------------------------
+    Request Form Quote
+---------------------------*/
+
+.request-area {
+    .left-content-area {
+        background-color: #f6f6f6;
+        padding: 120px 60px 120px 60px;
+        height: 100%;
+        .request-img {
+            height: 100%;
+            min-height: 400px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+    .right-content-area {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+}
+
+.request-page-form-wrap {
+    background-color: var(--main-color-one);
+    padding: 60px 60px 60px;
+    position: relative;
+    z-index: 2;
+    .title {
+        color: $white;
+        font-size: 30px;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+}
+
+.request-page-form {
+    .form-group {
+        textarea {
+            max-height: 160px;
+            resize: none;
+        }
+        .form-control {
+            border-radius: 0;
+            border: none;
+            border-bottom: 1px solid rgba($white, 0.70);
+            padding: 15px 30px 15px 0px;
+            margin-bottom: 25px;
+            color: $white;
+            background-color: transparent;
+            &::placeholder {
+                color: rgba($white, 0.70);
+                font-size: 14px;
+                font-weight: 500;
+            }
+            &:focus {
+                border-bottom: 1px solid $white;
+            }
+        }
+    }
+    .submit-btn {
+        background-color: var(--secondary-color);
+        padding: 19px 40px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $white;
+        transition: all .3s ease-in-out;
+        border: 1px solid rgba($white, 0.70);
+        &:hover {
+            background-color: $white;
+            color: var(--main-color-one);
+            border: 1px solid $white;
+        }
+    }
+}

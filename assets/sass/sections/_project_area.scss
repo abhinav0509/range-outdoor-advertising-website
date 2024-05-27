@@ -1,0 +1,11 @@
+// Prject Area
+.our-project-area {
+    &.bg-image {
+        position: relative;
+        z-index: 0;
+        &:after, {
+            height: 50%;
+            background-image: url(../img/project/01.png);
+        }
+    }
+}

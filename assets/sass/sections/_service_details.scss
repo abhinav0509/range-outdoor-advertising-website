@@ -1,0 +1,56 @@
+/*--------------------------
+   service details
+--------------------------*/
+
+.service-title-area{
+    .title-md {
+        max-width: 420px;
+    }
+    .section-p {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+}
+
+.service-wrapper {
+    &.bg-image {
+        position: relative;
+        z-index: 0;
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            left: auto;
+            top: 0;
+            width: 76%;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: -1;
+            background-image: url(../img/service/bg-2.jpg);
+        }
+    }
+}
+
+.service-inner-item {
+    background-color: $white;
+    padding: 50px 20px 50px 0;
+    .servicee-area {
+        padding-top: 15px;
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            li {
+                margin-bottom: 15px;
+                a {
+                    i {
+                        color: var(--main-color-one);
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

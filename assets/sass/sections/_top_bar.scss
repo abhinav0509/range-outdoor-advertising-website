@@ -1,0 +1,89 @@
+/*----------------------------
+    Top Bar
+----------------------------*/
+
+.topbar-area {
+    background-color: var(--main-color-one);
+    &.style-01 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+        background-color: transparent;
+        min-height: 55px;
+        border-bottom: 1px solid $border;
+        .info-items {
+            li {
+                color: rgba($white, .8);
+                i {
+                    font-size: 16px;
+                    line-height: 26px;
+                }
+                &:hover {
+                    color: var(--secondary-color);
+                }
+            }
+        }
+        .info-items-icon {
+            li {
+                color: rgba($white, .8);
+                &:hover {
+                    color: var(--secondary-color);
+                }
+            }
+        }
+    }
+    &.style-02 {
+        background-color: var(--main-color-one);
+        padding: 10px 0;
+        .info-items {
+            li {
+                color: rgba($white, .8);
+                i {
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+                &:hover {
+                    color: var(--secondary-color);
+                }
+            }
+        }
+        .info-items-icon {
+            li {
+                color: rgba($white, .8);
+                &:hover {
+                    color: var(--main-color-one);
+                }
+            }
+        }
+        .topbar-inner {
+            div {
+                &:first-child {
+                    padding-top: 0px;
+                }
+            }
+        }
+    }
+}
+
+.topbar-inner {
+    display: flex;
+    justify-content: space-between;
+    div {
+        &:first-child {
+            padding-top: 15px;
+        }
+        .boxed-btn {
+            padding: 15px 30px;
+            background-color: var(--main-color-one);
+            display: inline-block;
+            color: $white;
+            @include transition($transition);
+            &:hover {
+                background-color: var(--secondary-color);
+                color: $white;
+            }
+        }
+    }
+}

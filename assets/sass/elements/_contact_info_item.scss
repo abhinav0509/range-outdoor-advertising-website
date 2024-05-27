@@ -1,0 +1,62 @@
+/*-------------------------
+    Contact Info Item
+-------------------------*/
+
+.single-contact-item {
+    .title {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 26px;
+        text-transform: uppercase;
+    }
+    .details {
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--heading-color);
+    }
+}
+
+.contact_map {
+    height: 100%;
+}
+
+#map {
+    min-height: 500px;
+    height: 100%;
+    background-color: #ddd;
+}
+
+.contact-page-form {
+    .form-group {
+        textarea {
+            height: 100px;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #e6e6e6;
+            resize: none;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+        .form-control {
+            border: transparent;
+            border-radius: 0;
+            border: none;
+            border-bottom: 1px solid #e6e6e6;
+            color: inherit;
+            background-color: transparent;
+            padding: 20px 30px 20px 0px;
+            margin-bottom: 15px;
+            &::placeholder {
+              font-size: 14px; 
+            }
+
+            &:-ms-input-placeholder {
+              font-size: 14px; 
+            }
+
+            &::-ms-input-placeholder {
+              font-size: 14px; 
+            }
+        }
+    }
+}

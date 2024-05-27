@@ -1,0 +1,37 @@
+/*------------------------
+    Why us Item
+------------------------*/
+
+.single-why-us-box {
+    &.style-01 {
+        .title {
+            color: $white;
+        }
+        p {
+            color: $white;
+        }
+    }
+    .icon {
+        width: 60px;
+        height: 60px;
+        line-height: 1;
+        color: var(--secondary-color);
+        font-size: 48px;
+        transition: all 500ms;
+    }
+    .content {
+        flex: 1;
+        .title {
+            font-size: 16px;
+            line-height: 34px;
+            font-family: var(--heading-font);
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: all 500ms;
+        }
+        p {
+            font-size: 14px;
+            max-width: 265px;
+        }
+    }
+}

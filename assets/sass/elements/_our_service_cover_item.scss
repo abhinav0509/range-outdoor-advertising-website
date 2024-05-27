@@ -1,0 +1,80 @@
+/*--------------------------
+ what we cover item
+---------------------------*/
+
+.our-service-area {
+    position: relative;
+    .bg-text {
+        position: absolute;
+        animation: mymove 5s infinite;
+        top: 36%;
+        transform: translateY(-50%);
+        .title {
+            font-size: 26.667vw;
+            font-weight: 900;
+            -webkit-text-stroke-width: 10px;
+            -webkit-text-stroke-color: #f2f2f2;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    .btn-wrapper {
+        .boxed-btn {
+            padding: 5px 30px;
+        }
+    }
+}
+
+.single-what-we-service-item {
+    transition: all 500ms;
+    position: relative;
+    &:hover {
+        .single-what-img {
+            img {
+                transform: scale(1.2);
+            }
+        }
+    }
+    .single-what-img {
+        overflow: hidden;
+        img {
+            transition: all 500ms;
+        }
+    }
+    .content-wrapper {
+        padding: 30px 15px 18px 30px;
+        background-color: $white;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        .icon {
+            font-size: 45px;
+            color: var(--main-color-one);
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+        .content {
+            .title {
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 28px;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+                transition: all 500ms;
+            }
+            p {
+                transition: all 500ms;
+                max-width: 225px;
+            }
+        }
+    }
+}
+
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 200px;}
+}
+@media only screen and (max-width: 991px) {
+    .our-service-area .bg-text {
+        top: 18%;
+    }
+}

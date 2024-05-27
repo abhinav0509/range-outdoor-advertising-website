@@ -1,0 +1,134 @@
+/*--------------------------------------------------------------
+	## Header
+--------------------------------------------------------------*/
+
+.header-slider {
+    .owl-item {
+        &.active {
+            .title {
+                animation: slideInLeft 2s 0s both;
+            }
+            p {
+                animation: slideInLeft 2s 1s both;
+            }
+            span {
+                animation: slideInRight 2s 1s both;
+            }
+            .btn-wrapper {
+                animation: slideInUp 2s 2s both;
+            }
+        }
+    }
+    &:hover {
+        .owl-nav {
+            div {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+    .owl-nav {
+        div {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            color: rgba($white, 0.6);
+            border: 1px solid rgba($white, 0.6);
+            @include transition($transition);
+            visibility: hidden;
+            opacity: 0;
+            &:hover {
+                color: var(--secondary-color);
+                border-color: var(--secondary-color);
+            }
+            &.owl-next {
+                left: auto;
+                right: 20px;
+            }
+        }
+    }
+}
+
+.header-area {
+    padding: 300px 0 415px;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    &:before{
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: -webkit-gradient(linear, left top, right top, from(#180338), color-stop(50%, rgba(24, 3, 56, 0.95)), to(rgba(24, 3, 56, 0.5)));
+        background: -o-linear-gradient(left, #180338 0%, rgba(24, 3, 56, 0.95) 50%, rgba(24, 3, 56, 0.5) 100%);
+        background: linear-gradient(to right, #180338 0%, rgba(24, 3, 56, 0.95) 50%, rgba(24, 3, 56, 0.5) 100%);
+    }
+    .header-inner{
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+    }
+    .subtitle {
+        position: relative;
+        z-index: 0;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: rgba($white, 0.7);
+        padding-left: 70px;
+        letter-spacing: 1px;
+        &:after {
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 60px;
+            height: 2px;
+            background-color: var(--main-color-one);
+            content: "";
+        }
+    }
+    &.header-bg {
+        background-color: #000;
+        background-position: right top;
+        background-size: cover;
+        position: relative;
+        &-overlay:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(#261442, 0.75);
+            z-index: -1;
+        }
+    }
+    .title {
+        font-size: 72px;
+        line-height: 72px;
+        color: $white;
+        font-weight: 900;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+    p {
+        font-size: 18px;
+        line-height: 28px;
+        color: rgba(255, 255, 255, 0.8);
+    }
+    span {
+        color: var(--secondary-color);
+        font-size: 18px;
+        text-transform: uppercase;
+        display: block;
+    }
+}

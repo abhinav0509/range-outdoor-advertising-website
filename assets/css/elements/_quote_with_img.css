@@ -1,0 +1,11 @@
+/*-------------------------------
+    Quote With Image
+-------------------------------*/
+.quote-with-image-02 .img-wrapper {
+  position: relative;
+  z-index: 0; }
+  .quote-with-image-02 .img-wrapper .hover {
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    width: 60%; }
